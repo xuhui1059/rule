@@ -106,11 +106,11 @@ proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [♻️ 美国自动, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
   - {name: 🍀 Google, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 🐬 OneDrive, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 🪟 Microsoft, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 🎵 TikTok, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
+  - {name: 🐬 OneDrive, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
+  - {name: 🪟 Microsoft, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
+  - {name: 🎵 TikTok, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
   - {name: 📲 Telegram, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
   - {name: 🎥 NETFLIX, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
   - {name: 💶 PayPal, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}

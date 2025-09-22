@@ -104,16 +104,16 @@ dns:
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 📹 YouTube, type: select, proxies: [♻️ 美国自动, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 🍀 Google, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [♻️ 美国自动, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 媒体自动, 直连]}
+  - {name: 🍀 Google, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 直连]}
   - {name: 🤖 ChatGPT, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
   - {name: 🪟 Microsoft, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
   - {name: 🎵 TikTok, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🐸 AI自动, 直连]}
-  - {name: 📲 Telegram, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 🎥 NETFLIX, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
-  - {name: 💶 PayPal, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
+  - {name: 📲 Telegram, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 直连]}
+  - {name: 🎥 NETFLIX, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 直连]}
+  - {name: 💶 PayPal, type: select, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 媒体自动, 🐸 AI自动, 直连]}
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 120, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: ♻️ 日本自动, type: url-test, include-all: true, tolerance: 20, interval: 120, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }

@@ -140,7 +140,7 @@ rules:
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,apple_domain,直连
-  - RULE-SET,steam_cn,直连,no-resolve
+  - RULE-SET,steam_cn,直连
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,netflix_domain,🎥 NETFLIX

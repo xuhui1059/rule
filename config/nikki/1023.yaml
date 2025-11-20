@@ -53,15 +53,14 @@ sniffer:
   sniff:
     HTTP:
       ports: [80, 8080-8880]
-      override-destination: true
+      override-destination: false
     TLS:
       ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
-  force-domain:
-    - "+.v2ex.com"
   skip-domain:
-    - "+.baidu.com"
+    - "Mijia Cloud"
+    - "+.push.apple.com"
 
 # 入站  
 tun:
@@ -86,6 +85,9 @@ dns:
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
+    - "*"
+    - "+.lan"
+    - "+.local"
     - "rule-set:private_domain,cn_domain"
     - "+.msftconnecttest.com"
     - "+.msftncsi.com"
@@ -95,7 +97,6 @@ dns:
     - 223.5.5.5
   proxy-server-nameserver:
     - 119.29.29.29
-  # namesever尽量用运营商提供的DNS
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
@@ -125,7 +126,6 @@ proxy-groups:
   - {name: 🌐 全部节点, type: select, include-all: true}
 
 # 规则匹配
-# 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
@@ -140,7 +140,7 @@ rules:
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,apple_domain,直连
-  - RULE-SET,steam_cn,直连
+  - RULE-SET,steam_cn,直连,no-resolve
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,telegram_domain,📲 Telegram
   - RULE-SET,netflix_domain,🎥 NETFLIX

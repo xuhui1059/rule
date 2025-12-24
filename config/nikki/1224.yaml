@@ -118,7 +118,6 @@ rules:
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
   - RULE-SET,microsoft_cn_domain,直连
-  - RULE-SET,microsoft_domain,🪟 Microsoft
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
@@ -127,6 +126,7 @@ rules:
   - RULE-SET,spotify_domain,🎵 Spotify
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
+  - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,apple_domain,直连
   - RULE-SET,steam_cn,直连
   - RULE-SET,tiktok_domain,🎵 TikTok

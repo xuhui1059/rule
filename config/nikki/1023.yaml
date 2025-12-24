@@ -1,17 +1,17 @@
-
 # 必读！！！
+# 此版本没有做防泄露处理，如介意请使用另一个名字为configdns的版本
 # 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
 # 跑裸核用户请自行去掉下方控制面板模块的注释。
 # 机场订阅
 proxy-providers:
   Airport1:
-    url: "https://m2dy.whtjdasha.com/api/v1/client/subscribe?token=46e83fc0f81384fd249218b9aeacdf99"
+    url: "https://onehsy.yeniudsss.us/mj/v8/front/mysubnew?token=d35fb8f2e32bd742fb9474e303d65f8c&timestamp=1765087985&sign=cb98395c542d3ba572e594c970b0d155"
     type: http
     interval: 86400
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
-      interval: 120
+      interval: 300
     proxy: 直连
 
 # 节点信息
@@ -19,19 +19,13 @@ proxies:
   - {name: 直连, type: direct}
 
 # 全局配置 
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7894
+mixed-port: 7890
 allow-lan: true
 bind-address: "*"
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
-# interface-name: enp6s18
 log-level: warning
-find-process-mode: 'off'
 global-client-fingerprint: chrome
 keep-alive-idle: 600
 keep-alive-interval: 15
@@ -40,20 +34,19 @@ profile:
   store-fake-ip: true
 
 # 为防止使用插件朋友遇到面板问题，我注释掉了此模块。
-# 跑裸核朋友自行删除注释即可，使用nikki仅内核的ui路径改为/etc/nikki/run/ui
 #external-controller: 0.0.0.0:9090
 #secret: ""
-#external-ui: "/etc/mihomo/ui"
+#external-ui: ui
 #external-ui-name: zashboard
 #external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
-# 嗅探
+# 嗅探（fakeip下其实可以不用嗅探）
 sniffer:
   enable: true
   sniff:
     HTTP:
       ports: [80, 8080-8880]
-      override-destination: false
+      override-destination: true
     TLS:
       ports: [443, 8443]
     QUIC:
@@ -62,15 +55,15 @@ sniffer:
     - "Mijia Cloud"
     - "+.push.apple.com"
 
-# 入站  
+# 入站
 tun:
   enable: true
   # system/gvisor/mixed
   stack: mixed
   dns-hijack: ["any:53", "tcp://any:53"]
   #使用nikki，混入全部不修改的情况，开启接口指定为nikki
-  #使用仅内核自行修改下面三项为true
   #device: nikki
+  #使用仅内核自行修改下面三项为true
   auto-route: false
   auto-redirect: false
   auto-detect-interface: false
@@ -78,6 +71,7 @@ tun:
 # DNS模块
 dns:
   enable: true
+  cache-algorithm: arc
   listen: 0.0.0.0:1053
   ipv6: false
   respect-rules: true
@@ -85,21 +79,15 @@ dns:
   fake-ip-range: 28.0.0.1/8
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
-    - "*"
-    - "+.lan"
-    - "+.local"
-    - "rule-set:private_domain,cn_domain"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "time.*.com"
-    - "+.market.xiaomi.com"
+    - "rule-set:fakeipfilter_domain"
   default-nameserver:
-    - 223.5.5.5
+    - https://223.5.5.5/dns-query
   proxy-server-nameserver:
-    - 119.29.29.29
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
  
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
 # 如果相应分组没有筛选到对应的国家，请根据自己节点名字调整筛选关键字。
@@ -161,9 +149,10 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  fakeipfilter_domain: {<<: *domain, url: "https://raw.githubusercontent.com/wwqgtxx/clash-rules/release/fakeip-filter.mrs"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
-  ai: {  <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
+  ai: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   spotify_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
